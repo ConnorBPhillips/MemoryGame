@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,32 @@ namespace MemoryGame
         public MainPage()
         {
             this.InitializeComponent();
+        }
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        {
+    ... 
+    if (rootFrame == null)
+            {
+                rootFrame = new Frame();
+                rootFrame.Navigated += OnNavigated; 
+        ... 
+        SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
+                // Determine if Back button should be visible 
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                    rootFrame.CanGoBack ?
+                    AppViewBackButtonVisibility.Visible :
+                   AppViewBackButtonVisibility.Collapsed;
+            } 
+    ... 
+}
+        private void OnNavigated(object sender, NavigationEventArgs e)
+        {
+            // Determine if Back button should be visible 
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                ((Frame)sender).CanGoBack ?
+                AppViewBackButtonVisibility.Visible :
+                AppViewBackButtonVisibility.Collapsed;
         }
     }
 }
