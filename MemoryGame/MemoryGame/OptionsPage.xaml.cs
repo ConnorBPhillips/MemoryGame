@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,29 @@ namespace MemoryGame
         public OptionsPage()
         {
             this.InitializeComponent();
+        }
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var navManager = SystemNavigationManager.GetForCurrentView();
+            if (this.Frame.CanGoBack)
+            {
+                // Show Back button in title bar
+                navManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            }
+            else
+            {
+                // Remove Back button from title bar
+                navManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+
+            // Register BackRequested handler
+            navManager.BackRequested += SecondPage_BackRequested;
+        }
+        private void SecondPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+                this.Frame.GoBack();
         }
     }
 }

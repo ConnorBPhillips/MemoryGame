@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -27,31 +28,50 @@ namespace MemoryGame
         {
             this.InitializeComponent();
         }
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+       
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-    ... 
-    if (rootFrame == null)
+            var navManager = SystemNavigationManager.GetForCurrentView();
+            if (this.Frame.CanGoBack)
             {
-                rootFrame = new Frame();
-                rootFrame.Navigated += OnNavigated; 
-        ... 
-        SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+                // Show Back button in title bar
+                navManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            }
+            else
+            {
+                // Remove Back button from title bar
+                navManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
 
-                // Determine if Back button should be visible 
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-                    rootFrame.CanGoBack ?
-                    AppViewBackButtonVisibility.Visible :
-                   AppViewBackButtonVisibility.Collapsed;
-            } 
-    ... 
-}
-        private void OnNavigated(object sender, NavigationEventArgs e)
+            // Register BackRequested handler
+            navManager.BackRequested += SecondPage_BackRequested;
+        }
+
+        private void SecondPage_BackRequested(object sender, BackRequestedEventArgs e)
         {
-            // Determine if Back button should be visible 
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-                ((Frame)sender).CanGoBack ?
-                AppViewBackButtonVisibility.Visible :
-                AppViewBackButtonVisibility.Collapsed;
+            if (this.Frame.CanGoBack)
+                this.Frame.GoBack();
+        }
+
+        private void newGame_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GamePage));
+        }
+
+        private void resume_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void options_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OptionsPage));
+        }
+
+        private void about_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
+       

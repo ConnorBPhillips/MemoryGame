@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="about_Button" Content="About" HorizontalAlignment="Left" Margin="780,882,0,0" VerticalAlignment="Top" Height="72" Width="378" Click="about_Button_Click"/>
+        <Button x:Name="options_Button" Content="Options" HorizontalAlignment="Left" Margin="780,633,0,0" VerticalAlignment="Top" Height="72" Width="378" Click="options_Button_Click"/>
+        <Button x:Name="resume_Button" Content="Resume" HorizontalAlignment="Left" Margin="780,509,0,0" VerticalAlignment="Top" Height="72" Width="378" Click="resume_Button_Click"/>
+        <Button x:Name="newGame_Button" Content="New Game" HorizontalAlignment="Left" Margin="780,400,0,0" VerticalAlignment="Top" Height="72" Width="378" Click="newGame_Button_Click"/>
+        <TextBlock x:Name="title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="MEMORY PUZZLE" VerticalAlignment="Top" Height="369.471" Width="1488.666" Margin="547.111,16.616,-115.777,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="145" FontFamily="Elephant">
+            <TextBlock.RenderTransform>
+                <CompositeTransform SkewY="0.5" TranslateY="3.325"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
 
     </Grid>
 </Page>
