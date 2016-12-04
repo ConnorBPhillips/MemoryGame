@@ -622,3 +622,24 @@ C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\App.g.i.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\App.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\GamePage.g.i.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\GamePage.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MainPage.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\OptionsPage.g.i.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\OptionsPage.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\App.xaml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MainPage.xaml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\OptionsPage.xaml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\GamePage.xaml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\App.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MainPage.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\OptionsPage.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\GamePage.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MemoryGame.exe
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MemoryGame.pdb
