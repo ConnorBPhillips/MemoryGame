@@ -8,7 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="873,856,0,0" Height="86" Width="189"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Button x:ConnectionId='1' x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="573,28,0,0" Height="41" Width="189" Grid.Row="1"/>
 
     </Grid>
 </Page>
