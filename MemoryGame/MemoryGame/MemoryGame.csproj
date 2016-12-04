@@ -115,6 +115,23 @@
     <None Include="MemoryGame_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Add.png" />
+    <Content Include="Assets\App-core-bomb-icon.png" />
+    <Content Include="Assets\attention-icon.png" />
+    <Content Include="Assets\BeOS_Help_book.png" />
+    <Content Include="Assets\Clip-icon.png" />
+    <Content Include="Assets\furniture-icon.png" />
+    <Content Include="Assets\Gem-icon.png" />
+    <Content Include="Assets\Heart-icon.png" />
+    <Content Include="Assets\home_w.png" />
+    <Content Include="Assets\keditbookmarks.png" />
+    <Content Include="Assets\Key.png" />
+    <Content Include="Assets\Nuvola_apps_download_manager.png" />
+    <Content Include="Assets\pencil-128.png" />
+    <Content Include="Assets\pills-5-icon.png" />
+    <Content Include="Assets\puzzle.png" />
+    <Content Include="Assets\record.png" />
+    <Content Include="Assets\speakers.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
