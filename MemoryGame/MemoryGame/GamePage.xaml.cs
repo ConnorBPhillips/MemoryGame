@@ -31,8 +31,9 @@ namespace MemoryGame
             CreateGrid();
         }
         private GameBoard gameBoard = new GameBoard();
+        private GamePicture gamePictures = new GamePicture();
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
-        private SolidColorBrush white = new SolidColorBrush(Windows.UI.Colors.White);
+        private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.CadetBlue);
 
         private void boardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -70,6 +71,7 @@ namespace MemoryGame
             //grid = new bool[numberOfCells, numberOfCells];
             int rectSize = (int)boardCanvas.Width / numberOfCells;
             //gameBoard.NewGame();
+
             // Turn entire grid on and create rectangles to represent it
             for (int r = 0; r < numberOfCells; r++)
             {
@@ -79,7 +81,7 @@ namespace MemoryGame
 
                     Rectangle rect = new Rectangle();
 
-                    rect.Fill = white;
+                    rect.Fill = blue;
                     rect.Width = rectSize + 1;
                     rect.Height = rect.Width + 1;
                     rect.Stroke = black;
@@ -114,14 +116,15 @@ namespace MemoryGame
                     if (gameBoard.GetGridValue(r, c))
                     {
                         // On
-                        rect.Fill = white;
+                        rect.Fill = blue;
                         rect.Stroke = black;
                     }
                     else
                     {
                         // Off
-                        rect.Fill = black;
-                        rect.Stroke = white;
+                        // put the picture here 
+
+                        rect.Stroke = black;
                     }
                 }
             }

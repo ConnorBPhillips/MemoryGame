@@ -19,8 +19,8 @@
         <Button x:Name="medium_Button" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,158,0,0" Grid.Row="1"/>
         <Button x:Name="hard_Button" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,270,0,0" Grid.Row="1"/>
         <Button x:Name="easy_Button" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,42,0,0" Grid.Row="1"/>
-        <Button x:Name="sizeSix_Button" Content="6 X 6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,158,0,0" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="sizeFour_Button" Content="4 X 4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,42,0,0" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.635,0.443"/>
+        <Button x:Name="sizeSix_Button" Content="6 X 6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,158,0,0" Grid.Row="1" Grid.Column="1" Click="sizeSix_Button_Click"/>
+        <Button x:Name="sizeFour_Button" Content="4 X 4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,42,0,0" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.635,0.443" Click="sizeFour_Button_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Options" VerticalAlignment="Top" Width="339" Height="102" Margin="50,10,0,0" FontSize="80"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="381" Height="102" Margin="138,112,0,0" FontSize="80"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size of Grid" VerticalAlignment="Top" Width="449" Height="112" Margin="88,102,0,0" FontSize="80" Grid.Column="1"/>

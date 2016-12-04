@@ -50,5 +50,16 @@ namespace MemoryGame
             if (this.Frame.CanGoBack)
                 this.Frame.GoBack();
         }
+
+        private void sizeFour_Button_Click(object sender, RoutedEventArgs e)
+        {
+            GameBoard.MinGridSize = 4;
+        }
+
+        private void sizeSix_Button_Click(object sender, RoutedEventArgs e)
+        {
+            GameBoard.MinGridSize = 6;
+            
+        }
     }
 }

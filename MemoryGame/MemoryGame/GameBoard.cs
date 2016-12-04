@@ -12,7 +12,7 @@ namespace MemoryGame
             private bool[,] grid;           // Store the on/off state of the grid
             private Random rand;
             public const int MaxGridSize = 10;
-            public const int MinGridSize = 3;
+            public static int MinGridSize = 6;
             public int GridSize
             {
                 get
