@@ -50,7 +50,7 @@ namespace MemoryGame
                 }
             }
             // Maybe we can use this
-            public void Move(int row, int col)
+            public void Flip(int row, int col)
             {
                 if (row < 0 || row >= gridSize || col < 0 || col >= gridSize)
                 {

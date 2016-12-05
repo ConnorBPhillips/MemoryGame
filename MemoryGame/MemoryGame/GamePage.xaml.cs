@@ -36,7 +36,7 @@ namespace MemoryGame
             NumberList(gameSize);
             CreateGrid();
         }
-
+        public int flipCount = 0;
         private GameBoard gameBoard = new GameBoard();
         public int gameSize = GameBoard.MinGridSize;
         //private GamePicture gamePictures = new GamePicture();
@@ -195,7 +195,7 @@ namespace MemoryGame
             int row = (int)(mousePosition.Y) / rectSize;
             int col = (int)(mousePosition.X) / rectSize;
             // var rowCol = (Point)rect.Tag;
-            gameBoard.Move(row, col);
+            gameBoard.Flip(row, col);
             // Redraw the board
             DrawGrid();
             GameCompleted();
