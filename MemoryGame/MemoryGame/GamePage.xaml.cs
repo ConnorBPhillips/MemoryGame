@@ -29,6 +29,7 @@ namespace MemoryGame
     public sealed partial class GamePage : Page
     {
         List<GamePicture> pictureList = new List<GamePicture>();
+        List<Rectangle> rectangles = new List<Rectangle>();
         public GamePage()
         {
             this.InitializeComponent();
@@ -264,7 +265,7 @@ namespace MemoryGame
 
                     Canvas.SetTop(rect, y);
                     Canvas.SetLeft(rect, x);
-                    
+                    rectangles.add(rect);
                     // Add the new rectangle to the canvas' children
                     boardCanvas.Children.Add(rect);
                 }
