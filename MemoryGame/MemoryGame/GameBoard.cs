@@ -13,6 +13,7 @@ namespace MemoryGame
             private Random rand;
             public const int MaxGridSize = 10;
             public static int MinGridSize = 4;
+            public static int ChosenDifficulty = 5;
             public int GridSize
             {
                 get

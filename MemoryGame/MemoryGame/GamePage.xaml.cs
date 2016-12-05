@@ -200,22 +200,30 @@ namespace MemoryGame
         }
         private void boardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            int numberOfCells = gameBoard.GridSize;
-            int rectSize = (int)boardCanvas.Width / numberOfCells;
-            Rectangle rect = sender as Rectangle;
+            //int numberOfCells = gameBoard.GridSize;
+            //int rectSize = (int)boardCanvas.Width / numberOfCells;
+            //Rectangle rect = sender as Rectangle;
             
-            Point mousePosition = e.GetPosition(boardCanvas);
-            int row = (int)(mousePosition.Y) / rectSize;
-            int col = (int)(mousePosition.X) / rectSize;
-            // var rowCol = (Point)rect.Tag;
-            int temp = row * col;
-            string position = rect.Name;
-            int temp1 = Convert.ToInt32(position);
-            rect.Fill = pictureList[temp1].image;
-            gameBoard.Flip(row, col);
-            // Redraw the board
-            DrawGrid();
-            GameCompleted();
+            //Point mousePosition = e.GetPosition(boardCanvas);
+            //int row = (int)(mousePosition.Y) / rectSize;
+            //int col = (int)(mousePosition.X) / rectSize;
+            //// var rowCol = (Point)rect.Tag;
+
+            ////  Erno de Weerd  http://stackoverflow.com/questions/18914493/how-to-know-if-mouse-clicked-point-belongs-to-a-rectangle-or-not
+
+           
+            //foreach (var rectangle in rectangles)
+            //{
+               
+            //}
+            //int temp = row * col;
+            //string position = rect.Name;
+            //int temp1 = Convert.ToInt32(position);
+            //rect.Fill = pictureList[temp1].image;
+            //gameBoard.Flip(row, col);
+            //// Redraw the board
+            //DrawGrid();
+            //GameCompleted();
 
         }
         private async void GameCompleted()
@@ -265,11 +273,20 @@ namespace MemoryGame
 
                     Canvas.SetTop(rect, y);
                     Canvas.SetLeft(rect, x);
-                    rectangles.add(rect);
+                    rectangles.Add(rect);
                     // Add the new rectangle to the canvas' children
                     boardCanvas.Children.Add(rect);
+                    rect.Tapped += RectangleTapped;
                 }
             }
+        }
+        void RectangleTapped (object sender, TappedRoutedEventArgs e)
+        {
+            Rectangle rect = sender as Rectangle;
+            string position = rect.Name;
+            int temp1 = Convert.ToInt32(position);
+            rect.Fill = pictureList[temp1].image;
+
         }
         private void DrawGrid()
         {
@@ -333,22 +350,22 @@ namespace MemoryGame
 
         private void boardCanvas_Tapped_1(object sender, TappedRoutedEventArgs e)
         {
-            int numberOfCells = gameBoard.GridSize;
-            int rectSize = (int)boardCanvas.Width / numberOfCells;
-            Rectangle rect = sender as Rectangle;
+            //int numberOfCells = gameBoard.GridSize;
+            //int rectSize = (int)boardCanvas.Width / numberOfCells;
+            //Rectangle rect = sender as Rectangle;
 
-            Point mousePosition = e.GetPosition(boardCanvas);
-            int row = (int)(mousePosition.Y) / rectSize;
-            int col = (int)(mousePosition.X) / rectSize;
-            // var rowCol = (Point)rect.Tag;
-            int temp = row * col;
-            string position = rect.Name;
-            int temp1 = Convert.ToInt32(position);
-            rect.Fill = pictureList[temp1].image;
-            gameBoard.Flip(row, col);
-            // Redraw the board
-            DrawGrid();
-            GameCompleted();
+            //Point mousePosition = e.GetPosition(boardCanvas);
+            //int row = (int)(mousePosition.Y) / rectSize;
+            //int col = (int)(mousePosition.X) / rectSize;
+            //// var rowCol = (Point)rect.Tag;
+            //int temp = row * col;
+            //string position = rect.Name;
+            //int temp1 = Convert.ToInt32(position);
+            //rect.Fill = pictureList[temp1].image;
+            //gameBoard.Flip(row, col);
+            //// Redraw the board
+            //DrawGrid();
+            //GameCompleted();
 
         }
     }
