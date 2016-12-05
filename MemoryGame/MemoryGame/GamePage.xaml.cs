@@ -37,8 +37,10 @@ namespace MemoryGame
             NumberList(gameSize);
             CreateGrid();
         }
-        public int flipCount = 0;
+        public int flipCount = 1;
         private GameBoard gameBoard = new GameBoard();
+        private Rectangle FlippedFirst;
+        private Rectangle FlippedSecond;
         public int gameSize = GameBoard.MinGridSize;
         //private GamePicture gamePictures = new GamePicture();
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
@@ -287,6 +289,35 @@ namespace MemoryGame
             int temp1 = Convert.ToInt32(position);
             rect.Fill = pictureList[temp1].image;
 
+            if (flipCount > 1)
+            {
+                FlippedSecond = rect;
+
+                if(!CheckFlipped(FlippedFirst, FlippedSecond))
+                {
+                    FlippedFirst.Fill = blue;
+                    FlippedSecond.Fill = blue;
+                }
+                flipCount = 1;
+            }
+            else
+            {
+                FlippedFirst = rect;
+                flipCount++;
+
+            }
+
+        }
+        private bool CheckFlipped(Rectangle first, Rectangle second)
+        {
+            if (first.Name == second.Name)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         private void DrawGrid()
         {
