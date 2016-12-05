@@ -13,7 +13,7 @@
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
         <Button x:ConnectionId='1' x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="573,28,0,0" Height="41" Width="189" Grid.Row="1"/>
-        <Canvas x:ConnectionId='2' Name="boardCanvas" Width="700" Height="700" Canvas.Left="23" Canvas.Top="30"></Canvas>
+        <Canvas x:ConnectionId='2' Name="boardCanvas" Width="700" Height="700" Canvas.Left="23" Canvas.Top="30"                              ></Canvas>
     </Grid>
 </Page>
 

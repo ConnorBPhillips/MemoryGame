@@ -343,11 +343,17 @@
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\attention-icon.png">
       <PackagePath>Assets\attention-icon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Basketball-icon.png">
+      <PackagePath>Assets\Basketball-icon.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\BeOS_Help_book.png">
       <PackagePath>Assets\BeOS_Help_book.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Clip-icon.png">
       <PackagePath>Assets\Clip-icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\firewall.png">
+      <PackagePath>Assets\firewall.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\furniture-icon.png">
       <PackagePath>Assets\furniture-icon.png</PackagePath>

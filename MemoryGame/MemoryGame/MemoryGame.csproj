@@ -118,8 +118,10 @@
     <Content Include="Assets\Add.png" />
     <Content Include="Assets\App-core-bomb-icon.png" />
     <Content Include="Assets\attention-icon.png" />
+    <Content Include="Assets\Basketball-icon.png" />
     <Content Include="Assets\BeOS_Help_book.png" />
     <Content Include="Assets\Clip-icon.png" />
+    <Content Include="Assets\firewall.png" />
     <Content Include="Assets\furniture-icon.png" />
     <Content Include="Assets\Gem-icon.png" />
     <Content Include="Assets\Heart-icon.png" />

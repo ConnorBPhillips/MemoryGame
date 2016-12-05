@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-05T01:13:40.969</Modified>
+      <Modified>2016-12-05T05:17:33.739</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.exe">
       <PackagePath>entrypoint\MemoryGame.exe</PackagePath>
-      <Modified>2016-12-05T01:13:40.573</Modified>
+      <Modified>2016-12-05T05:17:33.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -460,6 +460,10 @@
       <PackagePath>Assets\attention-icon.png</PackagePath>
       <Modified>2016-12-04T23:02:55.803</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Basketball-icon.png">
+      <PackagePath>Assets\Basketball-icon.png</PackagePath>
+      <Modified>2016-12-05T04:56:37.456</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\BeOS_Help_book.png">
       <PackagePath>Assets\BeOS_Help_book.png</PackagePath>
       <Modified>2016-12-04T23:02:55.780</Modified>
@@ -467,6 +471,10 @@
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Clip-icon.png">
       <PackagePath>Assets\Clip-icon.png</PackagePath>
       <Modified>2016-12-04T23:02:55.784</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\firewall.png">
+      <PackagePath>Assets\firewall.png</PackagePath>
+      <Modified>2016-12-05T04:56:37.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\furniture-icon.png">
       <PackagePath>Assets\furniture-icon.png</PackagePath>
@@ -556,7 +564,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.xr.xml">
       <PackagePath>MemoryGame.xr.xml</PackagePath>
-      <Modified>2016-12-05T00:10:26.245</Modified>
+      <Modified>2016-12-05T05:11:28.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -565,11 +573,11 @@
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-05T00:10:26.894</Modified>
+      <Modified>2016-12-05T05:11:29.579</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\MemoryGame.exe">
       <PackagePath>MemoryGame.exe</PackagePath>
-      <Modified>2016-12-05T01:13:40.961</Modified>
+      <Modified>2016-12-05T05:17:33.732</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -63,11 +63,11 @@ namespace MemoryGame
             }
             else
             {
-                for (int i = 0; i < 16; i++)
+                for (int i = 0; i < 18; i++)
                 {
                     numbers.Add(i);
                 }
-                for (int i = 0; i < 16; i++)
+                for (int i = 0; i < 18; i++)
                 {
                     numbers.Add(i);
                 }
@@ -154,6 +154,15 @@ namespace MemoryGame
             ImageBrush record = new ImageBrush();
             bitmapImage = new BitmapImage(new Uri("ms-appx:///Assets/record.png"));
             record.ImageSource = bitmapImage;
+
+            ImageBrush basketball = new ImageBrush();
+            bitmapImage = new BitmapImage(new Uri("ms-appx:///Assets/Basketball-icon.png"));
+            basketball.ImageSource = bitmapImage;
+
+            ImageBrush firewall = new ImageBrush();
+            bitmapImage = new BitmapImage(new Uri("ms-appx:///Assets/firewall.png"));
+            firewall.ImageSource = bitmapImage;
+
             if (gameBoard.GridSize == 4)
             {
                 pictureList.Add(new GamePicture(add, 1, 1));
@@ -164,6 +173,7 @@ namespace MemoryGame
                 pictureList.Add(new GamePicture(furniture, 6, 1));
                 pictureList.Add(new GamePicture(gem, 7, 1));
                 pictureList.Add(new GamePicture(speakers, 8, 1));
+
             }
             else
             {
@@ -183,18 +193,24 @@ namespace MemoryGame
                 pictureList.Add(new GamePicture(pill, 14, 1));
                 pictureList.Add(new GamePicture(puzzle, 15, 1));
                 pictureList.Add(new GamePicture(record, 16, 1));
+                pictureList.Add(new GamePicture(basketball, 17, 1));
+                pictureList.Add(new GamePicture(firewall, 18, 1));
             }
         }
         private void boardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
             int numberOfCells = gameBoard.GridSize;
             int rectSize = (int)boardCanvas.Width / numberOfCells;
-            //Rectangle rect = sender as Rectangle;
-
+            Rectangle rect = sender as Rectangle;
+            
             Point mousePosition = e.GetPosition(boardCanvas);
             int row = (int)(mousePosition.Y) / rectSize;
             int col = (int)(mousePosition.X) / rectSize;
             // var rowCol = (Point)rect.Tag;
+            int temp = row * col;
+            string position = rect.Name;
+            int temp1 = Convert.ToInt32(position);
+            rect.Fill = pictureList[temp1].image;
             gameBoard.Flip(row, col);
             // Redraw the board
             DrawGrid();
@@ -235,9 +251,9 @@ namespace MemoryGame
                     rect.Width = rectSize + 1;
                     rect.Height = rect.Width + 1;
                     rect.Stroke = black;
-                    rect.Name = (numbers[i].ToString() + " " + i);
+                    rect.Name = (numbers[i].ToString());
                     
-                    rect.Fill = pictureList[numbers[i]].image;
+                    //rect.Fill = pictureList[numbers[i]].image;
                     i++;
                     // Store each row and col as a Point
                     rect.Tag = new Point(r, c);
@@ -312,6 +328,27 @@ namespace MemoryGame
         {
             if (this.Frame.CanGoBack)
                 this.Frame.GoBack();
+        }
+
+        private void boardCanvas_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            int numberOfCells = gameBoard.GridSize;
+            int rectSize = (int)boardCanvas.Width / numberOfCells;
+            Rectangle rect = sender as Rectangle;
+
+            Point mousePosition = e.GetPosition(boardCanvas);
+            int row = (int)(mousePosition.Y) / rectSize;
+            int col = (int)(mousePosition.X) / rectSize;
+            // var rowCol = (Point)rect.Tag;
+            int temp = row * col;
+            string position = rect.Name;
+            int temp1 = Convert.ToInt32(position);
+            rect.Fill = pictureList[temp1].image;
+            gameBoard.Flip(row, col);
+            // Redraw the board
+            DrawGrid();
+            GameCompleted();
+
         }
     }
 }

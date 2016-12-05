@@ -56,10 +56,23 @@ namespace MemoryGame
                 {
                     throw new ArgumentException("Row or column is outside the legal range of 0 to " + (gridSize - 1));
                 }
+            for (int i = row - 1; i <= row + 1; i++)
+            {
+                for (int j = col - 1; j <= col + 1; j++)
+                {
+                    if (i == row && j == col)
+                    {
+                        int temp = row * col;
+                        
 
+                    }
+                }
             }
-            // Needs to be changed to fit
-            public bool IsGameOver()
+
+
+        }
+        // Needs to be changed to fit
+        public bool IsGameOver()
             {
                 for (int r = 0; r < gridSize; r++)
                 {
