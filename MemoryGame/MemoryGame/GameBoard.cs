@@ -73,8 +73,12 @@ namespace MemoryGame
 
         }
         // Needs to be changed to fit
-        public bool IsGameOver()
+        public bool IsGameOver(int flippedCounter)
             {
+                if(flippedCounter == (gridSize * gridSize / 2))
+                {
+                    // put logic here
+                }
                 for (int r = 0; r < gridSize; r++)
                 {
                     for (int c = 0; c < gridSize; c++)

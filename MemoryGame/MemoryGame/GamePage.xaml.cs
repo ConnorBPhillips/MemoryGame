@@ -41,6 +41,7 @@ namespace MemoryGame
         private GameBoard gameBoard = new GameBoard();
         private Rectangle FlippedFirst;
         private Rectangle FlippedSecond;
+        public int flippedCounter = 1;
         public int gameSize = GameBoard.MinGridSize;
         //private GamePicture gamePictures = new GamePicture();
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
@@ -230,13 +231,15 @@ namespace MemoryGame
         }
         private async void GameCompleted()
         {
-            if (gameBoard.IsGameOver())
+            if (gameBoard.IsGameOver(flippedCounter))
             {
+                flippedCounter = 1;
                 MessageDialog msgDialog = new MessageDialog("Congratulations!  You've won!");
                 // Add an OK button
                 msgDialog.Commands.Add(new UICommand("OK"));
                 // Show the message box and wait aynchrously for a button press
                 IUICommand command = await msgDialog.ShowAsync();
+
             }
         }
         private void CreateGrid()
@@ -287,26 +290,32 @@ namespace MemoryGame
             Rectangle rect = sender as Rectangle;
             string position = rect.Name;
             int temp1 = Convert.ToInt32(position);
-            rect.Fill = pictureList[temp1].image;
-
-            if (flipCount > 1)
+            if (rect.Fill == blue)
             {
-                FlippedSecond = rect;
+                rect.Fill = pictureList[temp1].image;
 
-                if(!CheckFlipped(FlippedFirst, FlippedSecond))
+                if (flipCount > 1)
                 {
-                    FlippedFirst.Fill = blue;
-                    FlippedSecond.Fill = blue;
+                    FlippedSecond = rect;
+
+                    if (!CheckFlipped(FlippedFirst, FlippedSecond))
+                    {
+                        FlippedFirst.Fill = blue;
+                        FlippedSecond.Fill = blue;
+                    }
+                    else
+                    {
+                        flippedCounter++;
+                    }
+                    flipCount = 1;
                 }
-                flipCount = 1;
-            }
-            else
-            {
-                FlippedFirst = rect;
-                flipCount++;
+                else
+                {
+                    FlippedFirst = rect;
+                    flipCount++;
 
+                }
             }
-
         }
         private bool CheckFlipped(Rectangle first, Rectangle second)
         {
