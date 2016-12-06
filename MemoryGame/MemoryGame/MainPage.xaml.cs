@@ -70,7 +70,7 @@ namespace MemoryGame
 
         private void about_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(AboutPage));
         }
     }
 }

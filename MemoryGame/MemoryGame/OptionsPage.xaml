@@ -7,23 +7,48 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Purple" />
+            <Setter Property="BorderThickness" Value="8" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Helvetica"/>
+            <Setter Property="BorderBrush" Value="Green">
+            </Setter>
+        </Style>
+
+        <VisualState x:Name="Disabled">
+            <VisualState.Setters>
+                <Setter Target="RootGrid.(UIElement.Foreground)" Value="White"></Setter>
+            </VisualState.Setters>
+        </VisualState>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/0xffff_ed_0003.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="637*"/>
             <ColumnDefinition Width="643*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="113*"/>
-            <RowDefinition Height="247*"/>
+            <RowDefinition Height="226*"/>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="254*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="medium_Button" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,158,0,0" Grid.Row="1"/>
-        <Button x:Name="hard_Button" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,270,0,0" Grid.Row="1"/>
-        <Button x:Name="easy_Button" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,42,0,0" Grid.Row="1"/>
-        <Button x:Name="sizeSix_Button" Content="6 X 6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,158,0,0" Grid.Row="1" Grid.Column="1" Click="sizeSix_Button_Click"/>
-        <Button x:Name="sizeFour_Button" Content="4 X 4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,42,0,0" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.635,0.443" Click="sizeFour_Button_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Options" VerticalAlignment="Top" Width="339" Height="102" Margin="50,10,0,0" FontSize="80"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="381" Height="102" Margin="138,112,0,0" FontSize="80"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size of Grid" VerticalAlignment="Top" Width="449" Height="112" Margin="88,102,0,0" FontSize="80" Grid.Column="1"/>
+        <Rectangle Fill="#7EF4F4F5" HorizontalAlignment="Left" Height="566" Margin="41,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1118" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <Button x:Name="medium_Button" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,26,0,0" Grid.Row="2"/>
+        <Button x:Name="hard_Button" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,23,0,0" Grid.Row="3"/>
+        <Button x:Name="easy_Button" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,25,0,0" Grid.Row="1"/>
+        <Button x:Name="sizeSix_Button" Content="6 X 6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,26,0,0" Grid.Row="2" Grid.Column="1" Click="sizeSix_Button_Click"/>
+        <Button x:Name="sizeFour_Button" Content="4 X 4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,25,0,0" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.635,0.443" Click="sizeFour_Button_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Options" VerticalAlignment="Top" Width="208" Height="46" Margin="534,91,0,0" FontSize="40" FontFamily="OCR A Std" Grid.ColumnSpan="2" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="330" Height="57" Margin="175,159,0,0" FontSize="40" FontFamily="OCR A Std" FontWeight="Bold" Foreground="Black"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size of Grid" VerticalAlignment="Top" Width="362" Height="41" Margin="111,159,0,0" FontSize="40" Grid.Column="1" FontFamily="OCR A Std" Foreground="Black"/>
 
     </Grid>
 </Page>

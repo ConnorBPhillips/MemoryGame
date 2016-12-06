@@ -1008,3 +1008,8 @@ C:\Users\cphillips\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Deb
 C:\Users\cphillips\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\cphillips\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cphillips\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\AboutPage.xbf
+C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.g.i.cs
+C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.g.cs
+C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xaml
+C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xbf

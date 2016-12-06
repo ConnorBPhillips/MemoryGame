@@ -1,10 +1,13 @@
 WinMetadata\Windows.winmd
+Assets\0xffff_ed_0003.jpg
+Assets\0xffff_ed_0011.jpg
 Assets\Add.png
 Assets\App-core-bomb-icon.png
 Assets\attention-icon.png
 Assets\Basketball-icon.png
 Assets\BeOS_Help_book.png
 Assets\Clip-icon.png
+Assets\cover image.jpg
 Assets\firewall.png
 Assets\furniture-icon.png
 Assets\Gem-icon.png
@@ -13,13 +16,17 @@ Assets\home_w.png
 Assets\keditbookmarks.png
 Assets\Key.png
 Assets\LockScreenLogo.scale-200.png
+Assets\maxresdefault.jpg
 Assets\Nuvola_apps_download_manager.png
 Assets\pencil-128.png
 Assets\pills-5-icon.png
 Assets\puzzle.png
 Assets\record.png
 Assets\speakers.png
+Assets\SplashScreen.scale-125.png
+Assets\SplashScreen.scale-150.png
 Assets\SplashScreen.scale-200.png
+Assets\SplashScreen.scale-400.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png

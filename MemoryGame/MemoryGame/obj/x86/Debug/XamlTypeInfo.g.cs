@@ -132,19 +132,21 @@ namespace MemoryGame.MemoryGame_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "MemoryGame.GamePage";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "MemoryGame.AboutPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "MemoryGame.MainPage";
-            _typeNameTable[4] = "MemoryGame.OptionsPage";
+            _typeNameTable[3] = "MemoryGame.GamePage";
+            _typeNameTable[4] = "MemoryGame.MainPage";
+            _typeNameTable[5] = "MemoryGame.OptionsPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::MemoryGame.GamePage);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::MemoryGame.AboutPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::MemoryGame.MainPage);
-            _typeTable[4] = typeof(global::MemoryGame.OptionsPage);
+            _typeTable[3] = typeof(global::MemoryGame.GamePage);
+            _typeTable[4] = typeof(global::MemoryGame.MainPage);
+            _typeTable[5] = typeof(global::MemoryGame.OptionsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,9 +181,10 @@ namespace MemoryGame.MemoryGame_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_GamePage() { return new global::MemoryGame.GamePage(); }
-        private object Activate_3_MainPage() { return new global::MemoryGame.MainPage(); }
-        private object Activate_4_OptionsPage() { return new global::MemoryGame.OptionsPage(); }
+        private object Activate_0_AboutPage() { return new global::MemoryGame.AboutPage(); }
+        private object Activate_3_GamePage() { return new global::MemoryGame.GamePage(); }
+        private object Activate_4_MainPage() { return new global::MemoryGame.MainPage(); }
+        private object Activate_5_OptionsPage() { return new global::MemoryGame.OptionsPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -193,9 +196,9 @@ namespace MemoryGame.MemoryGame_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  MemoryGame.GamePage
+            case 0:   //  MemoryGame.AboutPage
                 userType = new global::MemoryGame.MemoryGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_GamePage;
+                userType.Activator = Activate_0_AboutPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -208,16 +211,23 @@ namespace MemoryGame.MemoryGame_XamlTypeInfo
                 xamlType = new global::MemoryGame.MemoryGame_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  MemoryGame.MainPage
+            case 3:   //  MemoryGame.GamePage
                 userType = new global::MemoryGame.MemoryGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_GamePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  MemoryGame.OptionsPage
+            case 4:   //  MemoryGame.MainPage
                 userType = new global::MemoryGame.MemoryGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_OptionsPage;
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  MemoryGame.OptionsPage
+                userType = new global::MemoryGame.MemoryGame_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_OptionsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

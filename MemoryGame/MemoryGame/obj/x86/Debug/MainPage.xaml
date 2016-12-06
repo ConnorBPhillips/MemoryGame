@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="Black" />
+            <Setter Property="Background" Value="Purple" />
             <Setter Property="BorderThickness" Value="8" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontFamily" Value="Verdana"/>
@@ -28,7 +28,10 @@
     </Page.Resources>
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/cover image.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="16*"/>
             <ColumnDefinition Width="7*"/>
