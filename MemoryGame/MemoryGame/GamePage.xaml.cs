@@ -34,9 +34,11 @@ namespace MemoryGame
         public GamePage()
         {
             this.InitializeComponent();
+            
             LoadingPictures();
             NumberList(gameSize);
             CreateGrid();
+            Timer();
         }
         public int flipCount = 1;
         private GameBoard gameBoard = new GameBoard();
@@ -48,9 +50,10 @@ namespace MemoryGame
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
         private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.CadetBlue);
         public List<int> numbers = new List<int>();
-
+        private int startTimer = 0;
         static Random rng = new Random();
-       
+        private int mainTimer;
+        private bool completed = false;
 
         public List<int> NumberList(int size)
         {
@@ -202,45 +205,19 @@ namespace MemoryGame
                 pictureList.Add(new GamePicture(firewall, 18, 1));
             }
         }
-        private void boardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            //int numberOfCells = gameBoard.GridSize;
-            //int rectSize = (int)boardCanvas.Width / numberOfCells;
-            //Rectangle rect = sender as Rectangle;
-            
-            //Point mousePosition = e.GetPosition(boardCanvas);
-            //int row = (int)(mousePosition.Y) / rectSize;
-            //int col = (int)(mousePosition.X) / rectSize;
-            //// var rowCol = (Point)rect.Tag;
-
-            ////  Erno de Weerd  http://stackoverflow.com/questions/18914493/how-to-know-if-mouse-clicked-point-belongs-to-a-rectangle-or-not
-
-           
-            //foreach (var rectangle in rectangles)
-            //{
-               
-            //}
-            //int temp = row * col;
-            //string position = rect.Name;
-            //int temp1 = Convert.ToInt32(position);
-            //rect.Fill = pictureList[temp1].image;
-            //gameBoard.Flip(row, col);
-            //// Redraw the board
-            //DrawGrid();
-            //GameCompleted();
-
-        }
+        
         private async void GameCompleted()
         {
             if (gameBoard.IsGameOver(flippedCounter))
             {
+                completed = true;
                 flippedCounter = 1;
                 MessageDialog msgDialog = new MessageDialog("Congratulations!  You've won!");
                 // Add an OK button
                 msgDialog.Commands.Add(new UICommand("OK"));
                 // Show the message box and wait aynchrously for a button press
                 IUICommand command = await msgDialog.ShowAsync();
-
+                
             }
         }
         private async void CreateGrid()
@@ -291,9 +268,25 @@ namespace MemoryGame
                 rectangle.Fill = blue;
             }
         }
-
+        async void Timer()
+        {
+           if (completed)
+            {
+                completed = false;
+            }
+            do
+            {
+                await Task.Delay(TimeSpan.FromSeconds(1));
+                startTimer++;
+                timer.Text = startTimer.ToString();
+                timer.UpdateLayout();
+            } while (!completed);
+            startTimer = 0;    
+                    
+        }
         async void RectangleTapped(object sender, TappedRoutedEventArgs e)
         {
+            
             Rectangle rect = sender as Rectangle;
             string position = rect.Name;
             int temp1 = Convert.ToInt32(position);
@@ -373,10 +366,17 @@ namespace MemoryGame
 
         private void newGame_Click(object sender, RoutedEventArgs e)
         {
-            gameBoard.NewGame();
+            reset();
+            
+            
             DrawGrid();
         }
-
+        private void reset()
+        {
+            flippedCounter = 1;
+            completed = true;
+            
+        }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var navManager = SystemNavigationManager.GetForCurrentView();
@@ -400,32 +400,16 @@ namespace MemoryGame
                 this.Frame.GoBack();
         }
 
-        private void boardCanvas_Tapped_1(object sender, TappedRoutedEventArgs e)
+
+
+        private async void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            //int numberOfCells = gameBoard.GridSize;
-            //int rectSize = (int)boardCanvas.Width / numberOfCells;
-            //Rectangle rect = sender as Rectangle;
-
-            //Point mousePosition = e.GetPosition(boardCanvas);
-            //int row = (int)(mousePosition.Y) / rectSize;
-            //int col = (int)(mousePosition.X) / rectSize;
-            //// var rowCol = (Point)rect.Tag;
-            //int temp = row * col;
-            //string position = rect.Name;
-            //int temp1 = Convert.ToInt32(position);
-            //rect.Fill = pictureList[temp1].image;
-            //gameBoard.Flip(row, col);
-            //// Redraw the board
-            //DrawGrid();
-            //GameCompleted();
-
-        }
-
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
-        {
+            reset();
+            await Task.Delay(TimeSpan.FromSeconds(1.1));
             LoadingPictures();
             NumberList(gameSize);
             CreateGrid();
+            Timer();
         }
     }
 }

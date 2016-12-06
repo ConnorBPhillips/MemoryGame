@@ -17,8 +17,9 @@
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
         <Button x:Name="button_Copy" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,92,0,0" Height="41" Width="189" Click="button_Copy_Click"/>
-        <Canvas Name="boardCanvas" Width="650" Height="650" Tapped="boardCanvas_Tapped_1" Margin="315,0,28,70" Grid.RowSpan="2"/>
+        <Canvas Name="boardCanvas" Width="650" Height="650" Margin="315,0,28,70" Grid.RowSpan="2"/>
         <Canvas HorizontalAlignment="Left" Height="274" Margin="26,65,0,0" VerticalAlignment="Top" Width="109" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock" Margin="47,194,884,389"/>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,200,842,375"/>
+        <TextBlock x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0"/>
     </Grid>
 </Page>

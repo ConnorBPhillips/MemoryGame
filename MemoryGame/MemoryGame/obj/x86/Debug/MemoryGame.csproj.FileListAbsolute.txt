@@ -1013,3 +1013,8 @@ C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.g.cs
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xaml
 C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\AboutPage.xbf
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.g.i.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.g.cs
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xaml
+C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\obj\x86\Debug\AboutPage.xbf

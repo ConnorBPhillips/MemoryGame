@@ -72,7 +72,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="MemoryGame.GamePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
