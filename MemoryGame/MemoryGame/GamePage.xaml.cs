@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -242,7 +243,7 @@ namespace MemoryGame
 
             }
         }
-        private void CreateGrid()
+        private async void CreateGrid()
         {
             int numberOfCells = gameBoard.GridSize;
             // Remove all previously-existing rectangles
@@ -261,13 +262,13 @@ namespace MemoryGame
 
                     Rectangle rect = new Rectangle();
 
-                    rect.Fill = blue;
+                    //rect.Fill = blue;
                     rect.Width = rectSize + 1;
                     rect.Height = rect.Width + 1;
                     rect.Stroke = black;
                     rect.Name = (numbers[i].ToString());
-                    
-                    //rect.Fill = pictureList[numbers[i]].image;
+
+                    rect.Fill = pictureList[numbers[i]].image;
                     i++;
                     // Store each row and col as a Point
                     rect.Tag = new Point(r, c);
@@ -284,8 +285,14 @@ namespace MemoryGame
                     rect.Tapped += RectangleTapped;
                 }
             }
+            await Task.Delay(TimeSpan.FromSeconds(1));
+            foreach (var rectangle in rectangles)
+            {
+                rectangle.Fill = blue;
+            }
         }
-        void RectangleTapped (object sender, TappedRoutedEventArgs e)
+
+        async void RectangleTapped(object sender, TappedRoutedEventArgs e)
         {
             Rectangle rect = sender as Rectangle;
             string position = rect.Name;
@@ -300,6 +307,9 @@ namespace MemoryGame
 
                     if (!CheckFlipped(FlippedFirst, FlippedSecond))
                     {
+                        
+                        //Thread.Sleep(milliseconds);
+                        await Task.Delay(TimeSpan.FromSeconds(.5));
                         FlippedFirst.Fill = blue;
                         FlippedSecond.Fill = blue;
                     }
@@ -315,7 +325,9 @@ namespace MemoryGame
                     flipCount++;
 
                 }
+
             }
+            GameCompleted();
         }
         private bool CheckFlipped(Rectangle first, Rectangle second)
         {
