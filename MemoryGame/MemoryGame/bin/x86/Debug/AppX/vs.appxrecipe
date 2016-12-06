@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-06T05:35:40.230</Modified>
+      <Modified>2016-12-06T07:26:31.921</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.exe">
       <PackagePath>entrypoint\MemoryGame.exe</PackagePath>
-      <Modified>2016-12-06T05:35:38.413</Modified>
+      <Modified>2016-12-06T07:26:30.477</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -595,7 +595,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.xr.xml">
       <PackagePath>MemoryGame.xr.xml</PackagePath>
-      <Modified>2016-12-06T05:06:31.827</Modified>
+      <Modified>2016-12-06T07:26:30.301</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -604,11 +604,11 @@
     <AppxPackagedFile Include="C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-06T05:35:39.895</Modified>
+      <Modified>2016-12-06T07:26:31.559</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\MemoryGame.exe">
       <PackagePath>MemoryGame.exe</PackagePath>
-      <Modified>2016-12-06T05:35:40.221</Modified>
+      <Modified>2016-12-06T07:26:31.911</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
