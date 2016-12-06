@@ -54,7 +54,7 @@ namespace MemoryGame
 
         public List<int> NumberList(int size)
         {
-            
+            numbers.Clear();
             if (size == 4)
             {
                 for (int i = 0; i < 8; i++)
@@ -297,7 +297,7 @@ namespace MemoryGame
             Rectangle rect = sender as Rectangle;
             string position = rect.Name;
             int temp1 = Convert.ToInt32(position);
-            if (rect.Fill == blue)
+            if (rect.Fill == blue && flipCount <3)
             {
                 rect.Fill = pictureList[temp1].image;
 
@@ -309,7 +309,7 @@ namespace MemoryGame
                     {
                         
                         //Thread.Sleep(milliseconds);
-                        await Task.Delay(TimeSpan.FromSeconds(.5));
+                        await Task.Delay(TimeSpan.FromSeconds(.35));
                         FlippedFirst.Fill = blue;
                         FlippedSecond.Fill = blue;
                     }
@@ -419,6 +419,13 @@ namespace MemoryGame
             //DrawGrid();
             //GameCompleted();
 
+        }
+
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            LoadingPictures();
+            NumberList(gameSize);
+            CreateGrid();
         }
     }
 }

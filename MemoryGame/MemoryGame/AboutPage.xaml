@@ -23,7 +23,7 @@
             <RowDefinition Height="143*"/>
             <RowDefinition Height="808*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Column="1" Fill="#7EF4F4F5" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="1169" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <Rectangle Grid.Column="1" Fill="#E5F4F4F5" HorizontalAlignment="Left" Height="482" Margin="10,10,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="1169" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
         <TextBlock x:Name="title" Grid.Column="2" Margin="10,19,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Memory Game" VerticalAlignment="Top" Height="76" FontSize="40" HorizontalAlignment="Left" Width="339" Foreground="Black" FontFamily="OCR A Std" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="authors" Grid.Column="1" HorizontalAlignment="Left" Margin="32,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Project by Connor Phillips and Derick Estrada" VerticalAlignment="Top" Height="40" Width="723" FontSize="20" Grid.ColumnSpan="3" FontFamily="OCR A Std"/>
         <TextBlock x:Name="version" Grid.Column="1" HorizontalAlignment="Left" Margin="32,87,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Version 1.0" VerticalAlignment="Top" Height="40" Width="459" FontSize="20" Grid.ColumnSpan="2" FontFamily="OCR A Std"/>
