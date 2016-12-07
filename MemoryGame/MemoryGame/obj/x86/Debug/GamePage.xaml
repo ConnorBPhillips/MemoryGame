@@ -26,7 +26,7 @@
         </VisualState>
     </Page.Resources>
 
-    <Grid Background="#FF853C75">
+    <Grid Background="#FF4B5F6C">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="993*"/>
             <ColumnDefinition Width="287*"/>
@@ -39,7 +39,7 @@
         <Canvas x:ConnectionId='3' Name="boardCanvas" Width="650" Height="650" Margin="315,0,28,70" Grid.RowSpan="2"/>
         <Canvas x:ConnectionId='4' x:Name="heartsCanvas" HorizontalAlignment="Left" Height="400" Margin="94,165,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
         <TextBlock x:ConnectionId='5' x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,187,840,386"/>
-        <TextBlock x:ConnectionId='6' x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0" Width="11"/>
+        <TextBlock x:ConnectionId='6' x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0" Width="30"/>
     </Grid>
 </Page>
 

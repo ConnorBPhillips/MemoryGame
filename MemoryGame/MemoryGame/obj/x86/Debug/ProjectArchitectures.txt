@@ -1,1 +1,1 @@
-C:\Users\derick\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\MemoryGame.csproj;x86
+C:\Users\cphillips\Documents\GitHub\MemoryGame\MemoryGame\MemoryGame\MemoryGame.csproj;x86

@@ -49,11 +49,11 @@ namespace MemoryGame
         public int gameSize = GameBoard.MinGridSize;
         //private GamePicture gamePictures = new GamePicture();
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
-        private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.CadetBlue);
+        private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.SlateGray);
         public List<int> numbers = new List<int>();
         private int startTimer = 0;
         static Random rng = new Random();
-        private int mainTimer;
+        
         private bool completed = false;
 
         public List<int> NumberList(int size)
