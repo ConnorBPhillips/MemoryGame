@@ -58,8 +58,22 @@ namespace MemoryGame
 
         private void sizeSix_Button_Click(object sender, RoutedEventArgs e)
         {
-            GameBoard.MinGridSize = 6;
-            
+            GameBoard.MinGridSize = 6;   
+        }
+
+        private void easy_Button_Click(object sender, RoutedEventArgs e)
+        {
+            GameBoard.ChosenDifficulty = 5;
+        }
+
+        private void medium_Button_Click(object sender, RoutedEventArgs e)
+        {
+            GameBoard.ChosenDifficulty = 4;
+        }
+
+        private void hard_Button_Click(object sender, RoutedEventArgs e)
+        {
+            GameBoard.ChosenDifficulty = 3;
         }
     }
 }

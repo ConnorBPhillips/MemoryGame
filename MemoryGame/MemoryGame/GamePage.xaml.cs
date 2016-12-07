@@ -38,6 +38,7 @@ namespace MemoryGame
             LoadingPictures();
             NumberList(gameSize);
             CreateGrid();
+            CreateLivesGrid();
             Timer();
         }
         public int flipCount = 1;
@@ -171,6 +172,7 @@ namespace MemoryGame
             bitmapImage = new BitmapImage(new Uri("ms-appx:///Assets/firewall.png"));
             firewall.ImageSource = bitmapImage;
 
+
             if (gameBoard.GridSize == 4)
             {
                 pictureList.Add(new GamePicture(add, 1, 1));
@@ -219,6 +221,43 @@ namespace MemoryGame
                 IUICommand command = await msgDialog.ShowAsync();
                 
             }
+        }
+
+        private void CreateLivesGrid()
+        {
+            ImageBrush heart = new ImageBrush();
+            BitmapImage bitmapHeartImage = new BitmapImage(new Uri("ms-appx:///Assets/Heart-icon.png"));
+            heart.ImageSource = bitmapHeartImage;
+
+            // Remove all previously-existing rectangles
+            heartsCanvas.Children.Clear();
+
+            int rectSize = (int)heartsCanvas.Width;
+
+            // Turn entire grid on and create rectangles to represent it
+                for (int c = 0; c < GameBoard.ChosenDifficulty ; c++)
+                {
+                    //grid[r, c] = true;
+
+                    Rectangle rect = new Rectangle();
+
+                    //rect.Fill = blue;
+                    rect.Width = rectSize;
+                    rect.Height = rect.Width;
+
+                    rect.Fill = heart;
+                    // Store each row and col as a Point
+                    rect.Tag = new Point(c, c);
+                    //rect. += Rect_MouseLeftButtonDown;
+
+                    int x = c;
+                    int y = c * rectSize;
+
+                    Canvas.SetTop(rect, y);
+                    Canvas.SetLeft(rect, x);
+                    // Add the new rectangle to the canvas' children
+                    heartsCanvas.Children.Add(rect);
+                }
         }
         private async void CreateGrid()
         {
@@ -288,6 +327,7 @@ namespace MemoryGame
         {
             
             Rectangle rect = sender as Rectangle;
+            Rectangle life = new Rectangle();
             string position = rect.Name;
             int temp1 = Convert.ToInt32(position);
             if (rect.Fill == blue && flipCount <3)
@@ -305,6 +345,7 @@ namespace MemoryGame
                         await Task.Delay(TimeSpan.FromSeconds(.35));
                         FlippedFirst.Fill = blue;
                         FlippedSecond.Fill = blue;
+                        heartsCanvas.Children.Remove(rect);
                     }
                     else
                     {

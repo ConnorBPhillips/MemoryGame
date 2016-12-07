@@ -7,7 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="White">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Purple" />
+            <Setter Property="BorderThickness" Value="8" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Helvetica"/>
+            <Setter Property="BorderBrush" Value="Green">
+            </Setter>
+        </Style>
+
+        <VisualState x:Name="Disabled">
+            <VisualState.Setters>
+                <Setter Target="RootGrid.(UIElement.Foreground)" Value="White"></Setter>
+            </VisualState.Setters>
+        </VisualState>
+    </Page.Resources>
+
+    <Grid Background="#FF853C75">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="993*"/>
             <ColumnDefinition Width="287*"/>
@@ -18,8 +37,8 @@
         </Grid.RowDefinitions>
         <Button x:Name="button_Copy" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,92,0,0" Height="41" Width="189" Click="button_Copy_Click"/>
         <Canvas Name="boardCanvas" Width="650" Height="650" Margin="315,0,28,70" Grid.RowSpan="2"/>
-        <Canvas HorizontalAlignment="Left" Height="274" Margin="26,65,0,0" VerticalAlignment="Top" Width="109" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,200,842,375"/>
-        <TextBlock x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0"/>
+        <Canvas x:Name="heartsCanvas" HorizontalAlignment="Left" Height="400" Margin="94,165,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,187,840,386"/>
+        <TextBlock x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0" Width="11"/>
     </Grid>
 </Page>

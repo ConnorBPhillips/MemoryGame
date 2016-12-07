@@ -30,7 +30,8 @@ namespace MemoryGame
                     }
                 }
             }
-            public GameBoard()
+
+        public GameBoard()
             {
                 rand = new Random();
                 GridSize = MinGridSize;

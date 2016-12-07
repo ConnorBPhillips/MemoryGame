@@ -41,9 +41,9 @@
             <RowDefinition Height="254*"/>
         </Grid.RowDefinitions>
         <Rectangle Fill="#E5F4F4F5" HorizontalAlignment="Left" Height="566" Margin="41,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1118" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-        <Button x:ConnectionId='2' x:Name="medium_Button" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,26,0,0" Grid.Row="2"/>
-        <Button x:ConnectionId='3' x:Name="hard_Button" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,23,0,0" Grid.Row="3"/>
-        <Button x:ConnectionId='4' x:Name="easy_Button" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,25,0,0" Grid.Row="1"/>
+        <Button x:ConnectionId='2' x:Name="medium_Button" Content="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,26,0,0" Grid.Row="2"                            />
+        <Button x:ConnectionId='3' x:Name="hard_Button" Content="Hard" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,23,0,0" Grid.Row="3"                          />
+        <Button x:ConnectionId='4' x:Name="easy_Button" Content="Easy" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="195,25,0,0" Grid.Row="1"                          />
         <Button x:ConnectionId='5' x:Name="sizeSix_Button" Content="6 X 6" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,26,0,0" Grid.Row="2" Grid.Column="1"                             />
         <Button x:ConnectionId='6' x:Name="sizeFour_Button" Content="4 X 4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="194" Margin="180,25,0,0" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.635,0.443"                              />
         <TextBlock x:ConnectionId='7' x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Options" VerticalAlignment="Top" Width="208" Height="46" Margin="492,85,0,0" FontSize="40" FontFamily="OCR A Std" Grid.ColumnSpan="2" Foreground="Black" FontWeight="Bold"/>
