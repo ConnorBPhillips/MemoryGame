@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -55,12 +56,14 @@ namespace MemoryGame
 
         private void newGame_Button_Click(object sender, RoutedEventArgs e)
         {
+            ApplicationData.Current.LocalSettings.Values["game"] = "new";
             this.Frame.Navigate(typeof(GamePage));
         }
 
         private void resume_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            ApplicationData.Current.LocalSettings.Values["game"] = "old";
+            this.Frame.Navigate(typeof(GamePage));
         }
 
         private void options_Button_Click(object sender, RoutedEventArgs e)

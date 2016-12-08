@@ -1,4 +1,5 @@
 ﻿using MemoryGame;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -31,15 +33,24 @@ namespace MemoryGame
     {
         List<GamePicture> pictureList = new List<GamePicture>();
         List<Rectangle> rectangles = new List<Rectangle>();
+        List<int> gridNumbers = new List<int>();
         public GamePage()
         {
             this.InitializeComponent();
-            
-            LoadingPictures();
-            NumberList(gameSize);
-            CreateGrid();
-            CreateLivesGrid();
-            Timer();
+            string game = ApplicationData.Current.LocalSettings.Values["game"] as string;
+            if (game != "new")
+            {
+
+            }
+            else
+            {
+                LoadingPictures();
+                NumberList(gameSize);
+                CreateGrid();
+                CreateLivesGrid();
+                Timer();
+            }
+           
         }
         public int flipCount = 1;
         private GameBoard gameBoard = new GameBoard();
@@ -349,6 +360,7 @@ namespace MemoryGame
                     }
                     else
                     {
+                        gridNumbers.Add(Convert.ToInt32(FlippedFirst.Name));
                         flippedCounter++;
                     }
                     flipCount = 1;
@@ -362,6 +374,8 @@ namespace MemoryGame
 
             }
             GameCompleted();
+            SaveGameStatus();
+
         }
         private bool CheckFlipped(Rectangle first, Rectangle second)
         {
@@ -416,6 +430,7 @@ namespace MemoryGame
         {
             flippedCounter = 1;
             completed = true;
+            gridNumbers.Clear();
             
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -452,5 +467,18 @@ namespace MemoryGame
             CreateGrid();
             Timer();
         }
+        private void SaveGameStatus()
+        {
+            SavingData save = new SavingData();
+            //save.lives = ;
+            save.numbersForPictures = numbers;
+            save.picturesTurned = gridNumbers;
+            save.timer = startTimer;
+            save.gameSize = gameSize;
+            save.flippedCounter = flippedCounter;
+            save.flipCount = flipCount;
+            string json = JsonConvert.SerializeObject(save);
+        }
     }
+    
 }

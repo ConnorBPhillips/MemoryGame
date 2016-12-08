@@ -13,7 +13,7 @@ namespace MemoryGame
         public List<int> numbersForPictures;
         public List<int> picturesTurned;
         public int timer;
-        public int gamesize;
+        public int gameSize;
         public int flippedCounter;
         public int flipCount;
         public SavingData()
