@@ -337,7 +337,9 @@ namespace MemoryGame
                 LoadingPictures();
                 NumberList(gameSize);
                 CreateGrid();
+                CreateLivesGrid();
                 Timer();
+                loseGame = false;
             }
             if (gameBoard.IsGameOver(flippedCounter))
             {
