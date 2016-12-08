@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>03BA12D4D9AB2352C6D1ABC6BCDF25005356F06E43FAAEF3245B3E98FAD0C0ED</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>A0F04289CF2BAC14FC369A73C0908B24405A71CF5C380C1BF092DD879448D723</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>5a0c511a-fdfd-4417-80b8-2bedbf437973_1.0.0.0_x86__jsepvqqehwqhe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>5a0c511a-fdfd-4417-80b8-2bedbf437973_jsepvqqehwqhe!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5a0c511a-fdfd-4417-80b8-2bedbf437973</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T04:39:23.313</Modified>
+      <Modified>2016-12-08T05:14:20.114</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.exe">
       <PackagePath>entrypoint\MemoryGame.exe</PackagePath>
-      <Modified>2016-12-08T04:39:22.886</Modified>
+      <Modified>2016-12-08T05:14:19.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -480,6 +480,11 @@
       <PackagePath>Assets\attention-icon.png</PackagePath>
       <Modified>2016-12-08T00:48:16.643</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T04:50:18.330</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Basketball-icon.png">
       <PackagePath>Assets\Basketball-icon.png</PackagePath>
       <Modified>2016-12-08T00:48:16.568</Modified>
@@ -559,6 +564,31 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-08T00:48:16.635</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T05:04:37.345</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T05:13:51.641</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T05:08:51.251</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T05:08:00.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-12-08T05:07:18.277</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2016-12-08T00:48:16.575</Modified>
@@ -571,22 +601,22 @@
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T02:11:14.619</Modified>
+      <Modified>2016-12-08T04:58:37.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T02:11:14.676</Modified>
+      <Modified>2016-12-08T04:56:03.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T02:11:14.730</Modified>
+      <Modified>2016-12-08T05:13:51.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T02:11:14.787</Modified>
+      <Modified>2016-12-08T04:54:37.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
@@ -608,11 +638,11 @@
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T03:50:42.254</Modified>
+      <Modified>2016-12-08T05:14:19.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\MemoryGame.exe">
       <PackagePath>MemoryGame.exe</PackagePath>
-      <Modified>2016-12-08T04:39:23.306</Modified>
+      <Modified>2016-12-08T05:14:20.109</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

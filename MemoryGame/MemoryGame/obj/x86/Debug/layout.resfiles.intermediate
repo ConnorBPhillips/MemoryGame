@@ -4,6 +4,7 @@ Assets\0xffff_ed_0011.jpg
 Assets\Add.png
 Assets\App-core-bomb-icon.png
 Assets\attention-icon.png
+Assets\BadgeLogo.scale-400.png
 Assets\Basketball-icon.png
 Assets\BeOS_Help_book.png
 Assets\Clip-icon.png
@@ -28,8 +29,13 @@ Assets\SplashScreen.scale-150.png
 Assets\SplashScreen.scale-200.png
 Assets\SplashScreen.scale-400.png
 Assets\Square150x150Logo.scale-200.png
+Assets\Square44x44Logo.scale-100.png
 Assets\Square44x44Logo.scale-200.png
+Assets\Square44x44Logo.targetsize-24.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
+Assets\Square71x71Logo.scale-100.png
+Assets\Square71x71Logo.scale-200.png
+Assets\Square71x71Logo.scale-400.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 MemoryGame.xr.xml

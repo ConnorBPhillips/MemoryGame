@@ -358,6 +358,10 @@
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\attention-icon.png">
       <PackagePath>Assets\attention-icon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Basketball-icon.png">
       <PackagePath>Assets\Basketball-icon.png</PackagePath>
     </AppxPackagedFile>
@@ -416,6 +420,26 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\derick\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\Assets\LockScreenLogo.scale-200.png">
