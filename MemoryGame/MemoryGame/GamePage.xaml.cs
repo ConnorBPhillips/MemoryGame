@@ -31,11 +31,13 @@ namespace MemoryGame
     /// </summary>
     public sealed partial class GamePage : Page
     {
+
         List<GamePicture> pictureList = new List<GamePicture>();
         List<Rectangle> rectangles = new List<Rectangle>();
         List<int> gridNumbers = new List<int>();
         private List<int> bestTimes = new List<int>();
         public int flipCount = 1;
+        private int livesCount = GameBoard.ChosenDifficulty;
         private GameBoard gameBoard = new GameBoard();
         private Rectangle FlippedFirst;
         private Rectangle FlippedSecond;
@@ -55,12 +57,15 @@ namespace MemoryGame
         public GamePage()
         {
             this.InitializeComponent();
-           
+
+            bestTimes.Add(0);
+            bestTimes.Add(0);
+            bestTimes.Add(0);
+
             if (ApplicationData.Current.LocalSettings.Values.ContainsKey("jsonTime"))
             {
                 jsonTime = ApplicationData.Current.LocalSettings.Values["jsonTime"] as string;
-                 bestTimes = JsonConvert.DeserializeObject<List<int>>(jsonTime);
-                
+                bestTimes = JsonConvert.DeserializeObject<List<int>>(jsonTime);  
             }    
             string game = ApplicationData.Current.LocalSettings.Values["game"] as string;
             if (game != "new")
@@ -100,7 +105,7 @@ namespace MemoryGame
                 CreateLivesGrid();
                 Timer();
             }
-           
+            PrintTimes();
         }
 
         private void ResumeGrid()
@@ -127,7 +132,6 @@ namespace MemoryGame
                     rect.Height = rect.Width + 1;
                     rect.Stroke = black;
                     rect.Name = (numbers[i].ToString());
-
 
                     i++;
                     // Store each row and col as a Point
@@ -320,33 +324,31 @@ namespace MemoryGame
                 CheckTimes();
                 completed = true;
                 flippedCounter = 1;
-                MessageDialog msgDialog = new MessageDialog("Congratulations!  You've won!");
+                PrintTimes();
+                MessageDialog msgDialog = new MessageDialog("Congratulations!  You've won! Your time is " + startTimer + " seconds");
                 // Add an OK button
                 msgDialog.Commands.Add(new UICommand("OK"));
                 // Show the message box and wait aynchrously for a button press
                 IUICommand command = await msgDialog.ShowAsync();
                 json = null;
                 ApplicationData.Current.LocalSettings.Values["json"] = json;
-                
-
 
             }
         }
         private void CheckTimes()
         {
-            
-            if (bestTimes[0] > startTimer)
+            if (bestTimes[0] > startTimer || bestTimes[0] == 0)
             {
                 bestTimes[2] = bestTimes[1];
                 bestTimes[1] = bestTimes[0];
                 bestTimes[0] = startTimer;
             }
-            else if (bestTimes[1] > startTimer)
+            else if (bestTimes[1] > startTimer || bestTimes[1] == 0)
             {
                 bestTimes[2] = bestTimes[1];
                 bestTimes[1] = startTimer;
             }
-            else if (bestTimes[2] > startTimer)
+            else if (bestTimes[2] > startTimer || bestTimes[2] == 0)
             {
                 bestTimes[2] = startTimer;
             }
@@ -365,7 +367,7 @@ namespace MemoryGame
             int rectSize = (int)heartsCanvas.Width;
 
             // Turn entire grid on and create rectangles to represent it
-                for (int c = 0; c < GameBoard.ChosenDifficulty ; c++)
+                for (int c = 0; c < livesCount ; c++)
                 {
                     //grid[r, c] = true;
 
@@ -475,7 +477,8 @@ namespace MemoryGame
                         await Task.Delay(TimeSpan.FromSeconds(.35));
                         FlippedFirst.Fill = blue;
                         FlippedSecond.Fill = blue;
-                        heartsCanvas.Children.Remove(rect);
+                        livesCount -= 1;
+                        CreateLivesGrid();
                     }
                     else
                     {
@@ -530,7 +533,6 @@ namespace MemoryGame
                     {
                         // Off
                         // put the picture here 
-
                         rect.Stroke = black;
                     }
                 }
@@ -542,8 +544,6 @@ namespace MemoryGame
         private void newGame_Click(object sender, RoutedEventArgs e)
         {
             reset();
-            
-            
             DrawGrid();
         }
         private void reset()
@@ -599,6 +599,14 @@ namespace MemoryGame
             save.flipCount = flipCount;
             json = JsonConvert.SerializeObject(save);
             ApplicationData.Current.LocalSettings.Values["json"] = json;
+        }
+
+        private void PrintTimes()
+        {
+            bestTimesText.Text = "Best Times!" +
+                System.Environment.NewLine + bestTimes[0] +
+                System.Environment.NewLine + bestTimes[1] +
+                System.Environment.NewLine + bestTimes[2];
         }
     }
     

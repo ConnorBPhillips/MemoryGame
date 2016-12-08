@@ -9,13 +9,13 @@
 
     <Page.Resources>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="Purple" />
-            <Setter Property="BorderThickness" Value="8" />
+            <Setter Property="Background" Value="#FF315F4C" />
+            <Setter Property="BorderThickness" Value="4" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontFamily" Value="Helvetica"/>
-            <Setter Property="BorderBrush" Value="Green">
+            <Setter Property="BorderBrush" Value="Indigo">
             </Setter>
         </Style>
 
@@ -37,9 +37,10 @@
         </Grid.RowDefinitions>
         <Button x:ConnectionId='2' x:Name="button_Copy" Content="New Game" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,92,0,0" Height="41" Width="189"                          />
         <Canvas x:ConnectionId='3' Name="boardCanvas" Width="650" Height="650" Margin="315,0,28,70" Grid.RowSpan="2"/>
-        <Canvas x:ConnectionId='4' x:Name="heartsCanvas" HorizontalAlignment="Left" Height="400" Margin="94,165,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
-        <TextBlock x:ConnectionId='5' x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,187,840,386"/>
-        <TextBlock x:ConnectionId='6' x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,266,0,0" Width="30"/>
+        <Canvas x:ConnectionId='4' x:Name="heartsCanvas" HorizontalAlignment="Left" Height="400" Margin="29,23,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <TextBlock x:ConnectionId='5' x:Name="textBlock" TextWrapping="Wrap" Text="Elapsed Time" Margin="47,187,789,368"/>
+        <TextBlock x:ConnectionId='6' x:Name="timer" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="47,240,0,0" Width="30"/>
+        <TextBlock x:ConnectionId='7' x:Name="bestTimesText" TextWrapping="Wrap" Text="" Margin="47,302,813,93"/>
     </Grid>
 </Page>
 
