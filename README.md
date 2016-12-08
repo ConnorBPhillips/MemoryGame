@@ -12,7 +12,7 @@ It
 
 
 1. If you click too fast on all the squares, sometimes the squares will glitch up and stay flipped without a match.
-2. Lives wont work but you can set the amount of lives with the difficulty.
+2. If you lose the game you have the ok button twice.
 3. There is a slight delay while clicking sometimes.
 4. Sometimes the elapsed time text cuts in half.
 

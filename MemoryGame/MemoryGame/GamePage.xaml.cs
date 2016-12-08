@@ -54,6 +54,8 @@ namespace MemoryGame
         static Random rng = new Random();
 
         private bool completed = false;
+        private bool loseGame;
+
         public GamePage()
         {
             this.InitializeComponent();
@@ -319,6 +321,24 @@ namespace MemoryGame
         
         private async void GameCompleted()
         {
+            if (loseGame)
+            {
+                flippedCounter = 1;
+                completed = true;
+                json = null;
+                ApplicationData.Current.LocalSettings.Values["json"] = json;
+                MessageDialog msgDialog = new MessageDialog("You have lost the game, sorry.");
+                // Add an OK button
+                msgDialog.Commands.Add(new UICommand("OK"));
+                // Show the message box and wait aynchrously for a button press
+                IUICommand command = await msgDialog.ShowAsync();
+                reset();
+                await Task.Delay(TimeSpan.FromSeconds(1.1));
+                LoadingPictures();
+                NumberList(gameSize);
+                CreateGrid();
+                Timer();
+            }
             if (gameBoard.IsGameOver(flippedCounter))
             {
                 CheckTimes();
@@ -332,7 +352,6 @@ namespace MemoryGame
                 IUICommand command = await msgDialog.ShowAsync();
                 json = null;
                 ApplicationData.Current.LocalSettings.Values["json"] = json;
-
             }
         }
         private void CheckTimes()
@@ -479,6 +498,11 @@ namespace MemoryGame
                         FlippedSecond.Fill = blue;
                         livesCount -= 1;
                         CreateLivesGrid();
+                        if (livesCount == 0)
+                        {
+                            loseGame = true;
+                            GameCompleted();
+                        }
                     }
                     else
                     {
@@ -548,6 +572,7 @@ namespace MemoryGame
         }
         private void reset()
         {
+            livesCount = GameBoard.ChosenDifficulty;
             flippedCounter = 1;
             completed = true;
             gridNumbers.Clear();
