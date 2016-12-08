@@ -37,10 +37,34 @@ namespace MemoryGame
         public GamePage()
         {
             this.InitializeComponent();
+           
+                
             string game = ApplicationData.Current.LocalSettings.Values["game"] as string;
             if (game != "new")
             {
-
+                if (json == null)
+                {
+                    LoadingPictures();
+                    NumberList(gameSize);
+                    CreateGrid();
+                    CreateLivesGrid();
+                    Timer();
+                }
+                else
+                {
+                    SavingData saveGame = JsonConvert.DeserializeObject<SavingData>(json);
+                    flipCount = saveGame.flipCount;
+                    flippedCounter = saveGame.flippedCounter;
+                    numbers = saveGame.numbersForPictures;
+                    gridNumbers = saveGame.picturesTurned;
+                    startTimer = saveGame.timer;
+                    gameSize = saveGame.gameSize;
+                    //lives = saveGame.lives;
+                    LoadingPictures();
+                    CreateGrid();
+                    CreateLivesGrid();
+                    Timer();
+                }
             }
             else
             {
@@ -58,6 +82,7 @@ namespace MemoryGame
         private Rectangle FlippedSecond;
         public int flippedCounter = 1;
         public int gameSize = GameBoard.MinGridSize;
+        private string json;
         //private GamePicture gamePictures = new GamePicture();
         private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
         private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.SlateGray);
@@ -272,7 +297,7 @@ namespace MemoryGame
         }
         private async void CreateGrid()
         {
-            int numberOfCells = gameBoard.GridSize;
+            int numberOfCells = gameSize;
             // Remove all previously-existing rectangles
             boardCanvas.Children.Clear();
 
@@ -364,6 +389,7 @@ namespace MemoryGame
                         flippedCounter++;
                     }
                     flipCount = 1;
+                    SaveGameStatus();
                 }
                 else
                 {
@@ -371,10 +397,10 @@ namespace MemoryGame
                     flipCount++;
 
                 }
-
+               
             }
             GameCompleted();
-            SaveGameStatus();
+            
 
         }
         private bool CheckFlipped(Rectangle first, Rectangle second)
@@ -477,7 +503,7 @@ namespace MemoryGame
             save.gameSize = gameSize;
             save.flippedCounter = flippedCounter;
             save.flipCount = flipCount;
-            string json = JsonConvert.SerializeObject(save);
+            json = JsonConvert.SerializeObject(save);
         }
     }
     
