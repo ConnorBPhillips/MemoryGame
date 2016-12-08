@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-08T01:07:56.659</Modified>
+      <Modified>2016-12-08T01:38:40.726</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\MemoryGame.exe">
       <PackagePath>entrypoint\MemoryGame.exe</PackagePath>
-      <Modified>2016-12-08T01:07:56.222</Modified>
+      <Modified>2016-12-08T01:38:40.376</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -612,7 +612,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\conno\OneDrive\Documents\Visual Studio 2015\Projects\MemoryGame\MemoryGame\MemoryGame\bin\x86\Debug\Core\MemoryGame.exe">
       <PackagePath>MemoryGame.exe</PackagePath>
-      <Modified>2016-12-08T01:07:56.655</Modified>
+      <Modified>2016-12-08T01:38:40.722</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

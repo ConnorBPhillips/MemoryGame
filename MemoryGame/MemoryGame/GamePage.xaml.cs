@@ -42,8 +42,10 @@ namespace MemoryGame
             string game = ApplicationData.Current.LocalSettings.Values["game"] as string;
             if (game != "new")
             {
-                if (json == null)
+                json = ApplicationData.Current.LocalSettings.Values["json"] as string;
+                if (json == null || completed == true)
                 {
+
                     LoadingPictures();
                     NumberList(gameSize);
                     CreateGrid();
@@ -61,13 +63,14 @@ namespace MemoryGame
                     gameSize = saveGame.gameSize;
                     //lives = saveGame.lives;
                     LoadingPictures();
-                    CreateGrid();
+                    ResumeGrid();
                     CreateLivesGrid();
                     Timer();
                 }
             }
             else
             {
+                json = null;
                 LoadingPictures();
                 NumberList(gameSize);
                 CreateGrid();
@@ -91,7 +94,64 @@ namespace MemoryGame
         static Random rng = new Random();
         
         private bool completed = false;
+        private async void ResumeGrid()
+        {
+            int numberOfCells = gameSize;
+            // Remove all previously-existing rectangles
+            boardCanvas.Children.Clear();
 
+            //grid = new bool[numberOfCells, numberOfCells];
+            int rectSize = (int)boardCanvas.Width / numberOfCells;
+            //gameBoard.NewGame();
+            int i = 0;
+            // Turn entire grid on and create rectangles to represent it
+            for (int r = 0; r < numberOfCells; r++)
+            {
+                for (int c = 0; c < numberOfCells; c++)
+                {
+                    //grid[r, c] = true;
+
+                    Rectangle rect = new Rectangle();
+
+                    //rect.Fill = blue;
+                    rect.Width = rectSize + 1;
+                    rect.Height = rect.Width + 1;
+                    rect.Stroke = black;
+                    rect.Name = (numbers[i].ToString());
+
+                    
+                    i++;
+                    // Store each row and col as a Point
+                    rect.Tag = new Point(r, c);
+                    //rect. += Rect_MouseLeftButtonDown;
+
+                    int x = c * rectSize;
+                    int y = r * rectSize;
+
+                    Canvas.SetTop(rect, y);
+                    Canvas.SetLeft(rect, x);
+                    rectangles.Add(rect);
+                    // Add the new rectangle to the canvas' children
+                    boardCanvas.Children.Add(rect);
+                    rect.Tapped += RectangleTapped;
+                }
+            }
+            
+            foreach (var rectangle in rectangles)
+            {
+                rectangle.Fill = blue;
+            }
+            foreach (var rectangle in rectangles)
+            {
+                foreach (var numberList in gridNumbers)
+                {
+                    if (Convert.ToInt32(rectangle.Name) == numberList)
+                    {
+                        rectangle.Fill = pictureList[Convert.ToInt32(rectangle.Name)].image;
+                    }
+                }
+            }
+        }
         public List<int> NumberList(int size)
         {
             numbers.Clear();
@@ -255,7 +315,11 @@ namespace MemoryGame
                 msgDialog.Commands.Add(new UICommand("OK"));
                 // Show the message box and wait aynchrously for a button press
                 IUICommand command = await msgDialog.ShowAsync();
-                
+                json = null;
+                ApplicationData.Current.LocalSettings.Values["json"] = json;
+
+
+
             }
         }
 
@@ -504,6 +568,7 @@ namespace MemoryGame
             save.flippedCounter = flippedCounter;
             save.flipCount = flipCount;
             json = JsonConvert.SerializeObject(save);
+            ApplicationData.Current.LocalSettings.Values["json"] = json;
         }
     }
     
