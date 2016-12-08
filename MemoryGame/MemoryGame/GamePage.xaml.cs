@@ -34,11 +34,34 @@ namespace MemoryGame
         List<GamePicture> pictureList = new List<GamePicture>();
         List<Rectangle> rectangles = new List<Rectangle>();
         List<int> gridNumbers = new List<int>();
+        private List<int> bestTimes = new List<int>();
+        public int flipCount = 1;
+        private GameBoard gameBoard = new GameBoard();
+        private Rectangle FlippedFirst;
+        private Rectangle FlippedSecond;
+        public int flippedCounter = 1;
+        public int gameSize = GameBoard.MinGridSize;
+        private string json;
+        private string jsonTime;
+        HighScores scores = new HighScores();
+        //private GamePicture gamePictures = new GamePicture();
+        private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
+        private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.SlateGray);
+        public List<int> numbers = new List<int>();
+        private int startTimer = 0;
+        static Random rng = new Random();
+
+        private bool completed = false;
         public GamePage()
         {
             this.InitializeComponent();
            
+            if (ApplicationData.Current.LocalSettings.Values.ContainsKey("jsonTime"))
+            {
+                jsonTime = ApplicationData.Current.LocalSettings.Values["jsonTime"] as string;
+                 bestTimes = JsonConvert.DeserializeObject<List<int>>(jsonTime);
                 
+            }    
             string game = ApplicationData.Current.LocalSettings.Values["game"] as string;
             if (game != "new")
             {
@@ -79,22 +102,8 @@ namespace MemoryGame
             }
            
         }
-        public int flipCount = 1;
-        private GameBoard gameBoard = new GameBoard();
-        private Rectangle FlippedFirst;
-        private Rectangle FlippedSecond;
-        public int flippedCounter = 1;
-        public int gameSize = GameBoard.MinGridSize;
-        private string json;
-        //private GamePicture gamePictures = new GamePicture();
-        private SolidColorBrush black = new SolidColorBrush(Windows.UI.Colors.Black);
-        private SolidColorBrush blue = new SolidColorBrush(Windows.UI.Colors.SlateGray);
-        public List<int> numbers = new List<int>();
-        private int startTimer = 0;
-        static Random rng = new Random();
-        
-        private bool completed = false;
-        private async void ResumeGrid()
+
+        private void ResumeGrid()
         {
             int numberOfCells = gameSize;
             // Remove all previously-existing rectangles
@@ -119,7 +128,7 @@ namespace MemoryGame
                     rect.Stroke = black;
                     rect.Name = (numbers[i].ToString());
 
-                    
+
                     i++;
                     // Store each row and col as a Point
                     rect.Tag = new Point(r, c);
@@ -136,7 +145,7 @@ namespace MemoryGame
                     rect.Tapped += RectangleTapped;
                 }
             }
-            
+
             foreach (var rectangle in rectangles)
             {
                 rectangle.Fill = blue;
@@ -308,6 +317,7 @@ namespace MemoryGame
         {
             if (gameBoard.IsGameOver(flippedCounter))
             {
+                CheckTimes();
                 completed = true;
                 flippedCounter = 1;
                 MessageDialog msgDialog = new MessageDialog("Congratulations!  You've won!");
@@ -317,12 +327,32 @@ namespace MemoryGame
                 IUICommand command = await msgDialog.ShowAsync();
                 json = null;
                 ApplicationData.Current.LocalSettings.Values["json"] = json;
-
+                
 
 
             }
         }
-
+        private void CheckTimes()
+        {
+            
+            if (bestTimes[0] > startTimer)
+            {
+                bestTimes[2] = bestTimes[1];
+                bestTimes[1] = bestTimes[0];
+                bestTimes[0] = startTimer;
+            }
+            else if (bestTimes[1] > startTimer)
+            {
+                bestTimes[2] = bestTimes[1];
+                bestTimes[1] = startTimer;
+            }
+            else if (bestTimes[2] > startTimer)
+            {
+                bestTimes[2] = startTimer;
+            }
+            jsonTime = JsonConvert.SerializeObject(bestTimes);
+            ApplicationData.Current.LocalSettings.Values["jsonTime"] = jsonTime;
+        }
         private void CreateLivesGrid()
         {
             ImageBrush heart = new ImageBrush();
